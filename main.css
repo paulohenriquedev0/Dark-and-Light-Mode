@@ -1,0 +1,76 @@
+/* Configurações de Variáveis e Temas */
+:root {
+    --green: #00FF00;
+    --white: #ffffff;
+    --black: #000000;
+}
+
+.light-theme {
+    --bg: var(--green);
+    --fontColor: var(--black);
+    --btnBg: var(--black);
+    --btnFontColor: var(--white);
+}
+
+.dark-theme {
+    --bg: var(--black);
+    --fontColor: var(--green);
+    --btnBg: var(--white);
+    --btnFontColor: var(--black);
+}
+
+/* Estilos Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: helvetica, Arial, sans-serif;
+    color: var(--fontColor);
+    /* Transição suave para todas as mudanças de cor */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+    background-color: var(--bg);
+    padding: 40px;
+}
+
+ul {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.list {
+    list-style: square;
+}
+
+/* Estilo do Botão */
+.btn {
+    position: absolute;
+    top: 20px;
+    left: 250px;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    
+    /* Cores vindas das variáveis do tema */
+    background-color: var(--btnBg);
+    color: var(--btnFontColor);
+    
+    font-weight: bold;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
